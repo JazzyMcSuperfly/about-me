@@ -1,3 +1,17 @@
+/* first steps of basic styling */
+
 * {
+  background-color: black;
+  color: cyan;
+  font-family: Arial, Verdana;
+}
+
+h1 {
+  background-color: silver;
+  color: black;
+}
+
+h2 {
+  background-color: gold;
   color: blue;
 }

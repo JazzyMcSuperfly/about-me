@@ -3,7 +3,7 @@ var userName = prompt('Hi, thanks for visiting! What is your name?');
 alert('Welcome ' + userName + ', nice to meet you! Time to play a guessing game about me!');
 console.log('The user name is ' + userName + '.');
 
-// Here come the questions
+// Here come the 5 questions
 var response1 = prompt('Do I have 3 cats?').toUpperCase();
 var answer1 = 'YES';
 
