@@ -1,15 +1,21 @@
+// Here we create the variables to store the total number of scored questions and
+// the number of correct responses given by the user
+var totalQuestions = 7;
+var correctResponses = 0;
+
 // Here we take the user's name as input to personalize the game
 var userName = prompt('Hi, thanks for visiting! What is your name?');
 alert('Welcome ' + userName + ', nice to meet you! Time to play a guessing game about me!');
 console.log('The user name is ' + userName + '.');
 
-// Here come the 5 questions
+// Here come the first 5 Y/N questions
 var response1 = prompt('Do I have 3 cats?').toUpperCase();
 var answer1 = 'YES';
 
 if (response1 === answer1 || response1 === answer1[0]) {
   alert('Nice work, ' + userName + ', you are correct!!!');
   console.log('Right answer1');
+  correctResponses++;
 } else {
   alert('Sorry, ' + userName + ', you got it wrong!!!');
   console.log('wrong answer1');
@@ -21,6 +27,7 @@ var answer2 = 'NO';
 if (response2 === answer2 || response2 === answer2[0]) {
   alert('Good work, ' + userName + ', you guessed correctly that I am not from the East coast.');
   console.log('right answer2');
+  correctResponses++;
 } else {
   alert('Sorry, ' + userName + ', I am actually from the West coast.');
   console.log('wrong answer2');
@@ -32,6 +39,7 @@ var answer3 = 'YES';
 if (response3 === answer3 || response3 === answer3[0]) {
   alert(userName + ', that is correct. I am actually married to my middleschool sweetheart.');
   console.log('right answer3');
+  correctResponses++;
 } else {
   alert('Sorry, ' + userName + ', but I really AM married.');
   console.log('wrong answer3');
@@ -43,6 +51,7 @@ var answer4 = 'NO';
 if (response4 === answer4 || response4 === answer4[0]) {
   alert('Correct, ' + userName + ', I am still just a beginner, but well on my way to greatness!');
   console.log('right answer4');
+  correctResponses++;
 } else {
   alert('Sorry, ' + userName + ', that was wrong. Can\'t you tell I am just a beginner?');
   console.log('wrong answer4');
@@ -54,6 +63,7 @@ var answer5 = 'YES';
 if (response5 === answer5 || response5 === answer5[0]) {
   alert('That is correct, ' + userName + ', the very fabric of reality will rests upon the rain-slick precipice of doom!');
   console.log('right answer5');
+  correctResponses++;
 } else {
   alert('How wrong you are, ' + userName + '. I guess you will never realize just how important JavaScript programming really is.');
   console.log('wrong answer5');
@@ -70,6 +80,7 @@ while (chances > 0) {
   if (response6 === answer6) {
     alert('You got it right, ' + userName + '! George has been married to his wife, Kelly, for 4 magical years.');
     console.log('The user guessed correctly');
+    correctResponses++;
     chances = 0;
   } else if ((chances > 0) && (response6 < answer6)) {
     chances--;
@@ -101,6 +112,7 @@ while (cityChances > 0) {
 
   for (var i = 0; i < rightAnswers7.length; i++) {
     if (response7 === rightAnswers7[i]) {
+      correctResponses++;
       userRightAnswer = true;
     }
   }
@@ -117,3 +129,5 @@ while (cityChances > 0) {
 if (userRightAnswer === false) {
   alert('You\'ve run out of guesses pal! Thanks for playing, ' + userName + '!');
 }
+
+alert('Thanks for playing, ' + userName + '! I hope you learned something. Your total score was ' + correctResponses + '/' + totalQuestions);
