@@ -88,3 +88,32 @@ while (chances > 0) {
     console.log('The user\'s entry was NaN');
   }
 }
+
+// Question 7 - Array of right answers w/ 6 chances and alert of all possible answers
+
+var rightAnswers7 = ['SEATTLE', 'PORTLAND', 'EUGENE', 'SPRINGFIELD', 'SHORELINE'];
+var cityChances = 6;
+var userRightAnswer = false;
+
+while (cityChances > 0) {
+  var response7 = prompt('I\'ve lived all over the place in both Oregon and Washington states in the last 20 years, ' + userName + '. Can you guess any of the cities I\'ve lived in? YOU HAVE A TOTAL OF ' + cityChances + ' CHANCES TO GUESS THE ANY ONE OF THE FIVE CORRECT ANSWERS. (HINT: They are fairly major cities.)').toUpperCase();
+  console.log(response7);
+
+  for (var i = 0; i < rightAnswers7.length; i++) {
+    if (response7 === rightAnswers7[i]) {
+      userRightAnswer = true;
+    }
+  }
+
+  if (userRightAnswer === true) {
+    alert('Good job, ' + userName + ', you guessed correctly! Here\'s a list of all the cities George has lived in: ' + rightAnswers7);
+    cityChances = 0;
+  } else {
+    cityChances--;
+    alert('Sorry, ' + userName + ', you now have ' + cityChances + ' remaining. Guess again!');
+  }
+}
+
+if (userRightAnswer === false) {
+  alert('You\'ve run out of guesses pal! Thanks for playing, ' + userName + '!');
+}
