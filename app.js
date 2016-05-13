@@ -3,7 +3,7 @@
 var totalQuestions = 7;
 var correctResponses = 0;
 
-// Here we take the user's name as input to personalize the game
+// Here we take the user's name as input to useralize the game
 var userName = prompt('Hi, thanks for visiting! What is your name?');
 alert('Welcome ' + userName + ', nice to meet you! Time to play a guessing game about me!');
 console.log('The user name is ' + userName + '.');
@@ -22,6 +22,7 @@ function question1() {
     console.log('wrong answer1');
   }
 }
+
 question1();
 
 function question2() {
@@ -85,6 +86,7 @@ function question5() {
     console.log('wrong answer5');
   }
 }
+
 question5();
 
 // Question 6 "Too high/low w/ 4 chances and alert of remaining chances"
@@ -153,6 +155,7 @@ function question7() {
     alert('You\'ve run out of guesses pal! Thanks for playing, ' + userName + '!');
   }
 }
+
 question7();
 
 alert('Thanks for playing, ' + userName + '! I hope you learned something. Your total score was ' + correctResponses + '/' + totalQuestions);
